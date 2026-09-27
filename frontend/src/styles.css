@@ -1,0 +1,70 @@
+:root {
+  --navy: #16233F;
+  --navy-deep: #0F1929;
+  --paper: #F6F3EC;
+  --paper-dark: #EBE6D8;
+  --line: #D8D0BC;
+  --ink: #1C1A15;
+  --muted: #726B5A;
+  --brick: #A23B33;
+  --amber: #B9791F;
+  --teal: #2F5D62;
+  --gold: #8C6D1F;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+.ledger-head {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+input, select, button, textarea {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.row-hover:hover { background: var(--paper-dark); cursor: pointer; }
+.rail-item:hover { background: rgba(255,255,255,0.06); }
+.rail-item.active { background: rgba(255,255,255,0.12); border-left: 3px solid var(--amber); }
+
+.fade-in { animation: fadeIn 0.35s ease both; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+  font-size: 13px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: white;
+  cursor: pointer;
+}
+.btn:hover { background: var(--paper-dark); }
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+.btn-primary:hover { background: var(--navy-deep); }
+.btn-danger {
+  background: white;
+  color: var(--brick);
+  border-color: var(--brick);
+}
+.btn-danger:hover { background: #FBEDEC; }
+
+::selection { background: var(--amber); color: white; }
+
+.badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  color: white;
+  display: inline-block;
+}
